@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="webjs"></script>
+    <link rel="stylesheet" href="web.css">
+    <title>Welcome to Jordan</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://lh3.googleusercontent.com/proxy/iKEma4PxoGaztuFTFAghVfdGlP3pSD4hOcer6xVqScrS98kp7tzNiAqhn4ccumJYTvU5VM0DunxmfpI" alt="">
+            <h1>Welcome To Jordan</h1>
+        </div>
+
+         <div class="places">
+             <button onclick="openPlace('deadsea')" >Dead Sea</button>
+             <button onclick="openPlace('petra')">Petra</button>
+             <button onclick="openPlace('wadirum')">Wadi Rum</button>
+        </div>
+
+        <div class="tab">
+            <div class="place">
+                <p id='deadsea'>is a salt lake bordered by Jordan to the east and the West Bank to the west. It lies in the Jordan Rift Valley, and its main tributary is the Jordan River</p>
+            </div>
+
+            <div class="place">
+                 <p id='petra'>is a historic and archaeological city in southern Jordan. Petra lies around Jabal Al-Madbah in a basin surrounded by mountains which form the eastern flank of the Arabah valley that runs from the Dead Sea to the Gulf of Aqaba.</p>
+            </div>
+
+            <div class="place">
+                <p id='wadirum'> is a valley cut into the sandstone and granite rock in southern Jordan 60 km (37 mi) to the east of Aqaba; it is the largest wadi in Jordan.</p>
+        
+                
+                <!-- does not work -->
+                
+                <!-- <script>
+                    function openPlace(placeName){
+                        var i;
+                        var x = document.getElementsByClassName("place");
+                        for ( i = 0; i < x.length; i++) {
+                            x[i].style.display="none";
+                            
+                        }{
+                        document.getElementById(placeName).style.display ="block";
+                    }
+                }
+                </script> -->
+        
+        
+        </div>
+
+
+        <div class="slides">
+
+            <div class="photo" >
+                <div class = 'pic'>
+                <img src="https://www.thewholeworldisaplayground.com/wp-content/uploads/2018/05/Jordan-Things-to-do-in-Petra-Wadi-Musa-1.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class= 'pic'>
+                <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-165047390_high.jpg?auto=compress&fit=crop&fm=auto&sharp=10&vib=20&w=1200&h=800" alt="">
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class= 'pic'>
+                <img src="https://stepintojordan.com/wp-content/uploads/2019/09/How-to-get-to-Wadi-Rum-from-Amman.jpg" alt="">
+                </div>
+            </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div> 
+
+            
+            <script>
+                var slideNum= 1;
+                showSlide (slideNum);
+
+                function plusSlides(n){
+                    showSlide(slideNum += n);
+                }
+
+                function showSlide(n) {
+                var i;
+                var shown= document.getElementsByClassName("photo");
+                if (n>shown.length){slideNum = 1}
+                if (n<1){slideNum = shown.length};
+                for (i = 0; i< shown.length; i++) {
+                    shown[i].style.display = "none";
+                    
+                }
+                
+                    shown[slideNum-1].style.display="block";
+                    
+                }
+
+
+            </script>
+        </div>
+                
+    </header>
+
+    <main>
+        <hr>
+        <div class="title2">
+            <h2>Other Places</h2>
+        </div>
+
+        <div class="photoContainer1"> 
+            <div class="other">
+                <img  src="https://blog.goway.com/globetrotting/wp-content/uploads/2013/10/Jerash-Jordan-92927311-e1444526575688.jpg?x95206" alt="">
+                <h2>Jerash</h2>
+            </div>
+        </div>
+        <div class="photoContainer2">
+            <div class="other">
+                <img  src="https://media-cdn.tripadvisor.com/media/photo-m/1280/16/b7/2a/96/romisches-theater-amman.jpg" alt="">
+                <h2>Amman</h2>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="title3">
+            <h2>Meet People</h2>
+        </div>
+
+        <div class="photoContainer3">
+            <div class="other">
+            <img src="https://images.memphistours.com/large/678685552_jordan_wadi_rum_friendly_locals.jpg" alt="">
+            <h2>In Desert</h2>
+            </div>
+        </div>
+
+        <div class="photoContainer4">
+            <div class="other">
+                <img src="https://www.worldatlas.com/upload/66/ce/ab/jordan-society.jpg" alt="">
+            </div>
+            <h2>In Cities</h2>
+        </div>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
